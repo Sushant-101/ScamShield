@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from routes.analysis import router as analysis_router
 
+
 app = FastAPI(title="ScamShield API")
 
 

@@ -2275,3 +2275,262 @@ textarea {
 .app.light .privacy-note {
   color: #667085 !important;
 }
+
+/* =========================================================
+   COMPANY INFORMATION & VERIFICATION
+   Added without replacing existing ScamShield styles
+   ========================================================= */
+
+.company-verification-section {
+  width: 100%;
+  margin-top: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--card);
+}
+
+.company-verification-section h3,
+.company-verification-section h4 {
+  color: var(--text);
+  font-weight: 750;
+}
+
+.company-verification-section h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.company-verification-section p {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.company-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.company-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.company-input-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.company-input-group label {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.company-input-group input,
+.company-input-group textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 13px;
+  border: 1px solid var(--border-strong);
+  border-radius: 9px;
+  outline: none;
+  background: var(--input);
+  color: var(--text);
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-input-group input::placeholder,
+.company-input-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.company-input-group input:focus,
+.company-input-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(82, 117, 255, 0.13);
+}
+
+.verification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.verification-card {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--card);
+}
+
+.verification-card h4 {
+  margin-bottom: 11px;
+  font-size: 14px;
+}
+
+.verification-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.verification-row:last-child {
+  border-bottom: 0;
+}
+
+.verification-row span {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.verification-row strong {
+  max-width: 65%;
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.verification-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.verification-status.success {
+  color: var(--green);
+  background: rgba(57, 185, 128, 0.12);
+}
+
+.verification-status.warning {
+  color: var(--amber);
+  background: rgba(244, 168, 46, 0.13);
+}
+
+.verification-status.danger {
+  color: var(--red);
+  background: rgba(240, 79, 85, 0.12);
+}
+
+.verification-status.pending {
+  color: var(--blue-light);
+  background: rgba(82, 117, 255, 0.12);
+}
+
+.verification-message {
+  margin-top: 12px;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.verification-message.warning {
+  border-color: rgba(244, 168, 46, 0.3);
+  background: rgba(244, 168, 46, 0.08);
+  color: var(--amber);
+}
+
+.verification-message.error {
+  border-color: rgba(240, 79, 85, 0.3);
+  background: rgba(240, 79, 85, 0.08);
+  color: var(--red);
+}
+
+.verify-company-button {
+  min-height: 43px;
+  margin-top: 16px;
+  padding: 10px 19px;
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.verify-company-button:hover {
+  transform: translateY(-1px);
+}
+
+.verify-company-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Light theme contrast */
+
+.app.light .company-verification-section h3,
+.app.light .company-verification-section h4,
+.app.light .company-input-group label,
+.app.light .verification-row strong {
+  color: #101828;
+}
+
+.app.light .company-verification-section p,
+.app.light .verification-row span {
+  color: #475467;
+}
+
+.app.light .company-input-group input,
+.app.light .company-input-group textarea {
+  color: #101828;
+  background: #f9fafb;
+  border-color: #98a2b3;
+}
+
+@media (max-width: 700px) {
+  .company-verification-section {
+    padding: 15px;
+  }
+
+  .company-input-grid,
+  .verification-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-input-group.full-width {
+    grid-column: auto;
+  }
+
+  .verification-card {
+    padding: 14px;
+  }
+
+  .verification-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .verification-row strong {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .verify-company-button {
+    width: 100%;
+  }
+}
